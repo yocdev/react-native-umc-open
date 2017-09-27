@@ -14,13 +14,13 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  private AuthnHelper authHelper;
+  private AuthnHelper authnHelper;
 
   public RNUmcOpenModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
 
-    authHelper = AuthnHelper.getInstance(reactContext);
+    authnHelper = AuthnHelper.getInstance(reactContext);
   }
 
   @Override
