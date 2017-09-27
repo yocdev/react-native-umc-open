@@ -21,7 +21,7 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "UmcOpen";
+    return "RNUmcOpen";
   }
 
   @ReactMethod
