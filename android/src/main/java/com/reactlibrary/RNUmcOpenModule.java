@@ -29,7 +29,7 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void login(String appId, String appKey, Callback callback) {
+  public void login(String appId, String appKey, final Callback callback) {
     TokenListener listener = new TokenListener() {
       @Override
       public void onGetTokenComplete(JSONObject json) {
