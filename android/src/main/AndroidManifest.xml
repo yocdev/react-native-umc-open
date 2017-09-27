@@ -1,6 +1,29 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.reactlibrary">
+  <activity
+    android:name="cm.pass.sdk.activity.BufferActivity"
+    android:configChanges="orientation|keyboardHidden|screenSize"
+    android:screenOrientation="unspecified" />
+
+  <activity
+      android:name="cm.pass.sdk.activity.LoginAuthActivity"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:screenOrientation="unspecified" />
+
+  <activity
+      android:name="cm.pass.sdk.activity.AuthActivity"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:screenOrientation="unspecified" />
+
+  <activity
+      android:name="cm.pass.sdk.activity.OAuthActivity"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:screenOrientation="unspecified" />
+
+  <activity
+      android:name="cm.pass.sdk.activity.ChooseAccountActivity"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:screenOrientation="unspecified" />
 
 </manifest>
-  
