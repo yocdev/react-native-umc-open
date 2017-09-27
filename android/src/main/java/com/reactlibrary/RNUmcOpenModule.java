@@ -19,4 +19,9 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNUmcOpen";
   }
+
+  @ReactMethod
+  public void login(String appId, String appKey) {
+      return "OK"
+  }
 }

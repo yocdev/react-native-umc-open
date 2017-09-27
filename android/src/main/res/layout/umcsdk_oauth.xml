@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_smsbg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/umcsdk_title_layout"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 异常提示 -->
+            <include
+                android:id="@+id/umcsdk_exception_layout"
+                layout="@layout/umcsdk_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/umcsdk_oauth_account"
+                android:layout_width="fill_parent"
+                android:layout_height="80dip"
+                android:hint="请输入手机号码"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:paddingLeft="@dimen/umcsdk_dimen_fifteen"
+                android:paddingRight="@dimen/umcsdk_dimen_fifteen"
+                android:paddingTop="36dp"
+                android:textColorHint="#c1c1c1"
+                android:textColor="#333333"
+                android:background="@android:color/transparent"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/umcsdk_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:layout_below="@id/umcsdk_oauth_account"
+                android:background="#c6c6c6" />
+
+
+            <!-- 短信验证码 -->
+            <RelativeLayout
+                android:id="@+id/layout_oauth_passwd"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@id/umcsdk_oauth_account"
+                android:layout_alignRight="@id/umcsdk_oauth_account"
+                android:layout_below="@id/umcsdk_divider1"
+                android:layout_centerHorizontal="true"
+                android:minWidth="@dimen/umcsdk_min_width">
+
+                <EditText
+                    android:id="@+id/umcsdk_oauth_passwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:hint="@string/umcsdk_hint_passwd"
+                    android:paddingLeft="@dimen/umcsdk_dimen_fifteen"
+                    android:paddingRight="@dimen/umcsdk_dimen_fifteen"
+                    android:background="@android:color/transparent"
+                    android:textColorHint="#c1c1c1"
+                    android:textColor="#333333"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/umcsdk_smscode_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                    android:text="@string/umcsdk_get_sms_code"
+                    android:textColor="#0086d0"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#c6c6c6" />
+            </RelativeLayout>
+
+            <!-- 登录按钮 -->
+            <include
+                android:id="@+id/umcsdk_login_btn"
+                layout="@layout/umcsdk_login_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/umcsdk_btn_height"
+                android:layout_below="@id/layout_oauth_passwd"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginTop="@dimen/umcsdk_smscode_login_margin"
+                android:clickable="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:minWidth="@dimen/umcsdk_min_width" />
+
+            <!-- 高级权限列表 -->
+            <include
+                android:id="@+id/umcsdk_capaids_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/umcsdk_login_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginRight="@dimen/umcsdk_loginbtn_left"
+                android:layout_marginTop="@dimen/umcsdk_server_clause_margin"
+                android:visibility="gone"
+                layout="@layout/umcsdk_author" />
+
+            <!-- 服务协议 -->
+            <include
+                android:id="@+id/umcsdk_server_layout"
+                layout="@layout/umcsdk_server_clause"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/umcsdk_server_clause_margin" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <!-- title -->
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        layout="@layout/umcsdk_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentTop="true" />
+
+
+
+</RelativeLayout>
