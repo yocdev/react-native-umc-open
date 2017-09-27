@@ -14,30 +14,24 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  private AuthnHelper authnHelper;
-
   public RNUmcOpenModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
-
-    authnHelper = AuthnHelper.getInstance(reactContext);
   }
 
   @Override
   public String getName() {
-    return "RNUmcOpen";
+    return "UmcOpen";
   }
 
   @ReactMethod
   public void login(String appId, String appKey, final Callback callback) {
-    TokenListener listener = new TokenListener() {
-      @Override
-      public void onGetTokenComplete(JSONObject json) {
-        callback.invoke(json.toString());
-      }
-    };
-    authnHelper.umcLoginByType(
-        appId, appKey,
-        AuthnHelper.UMC_LOGIN_DISPLAY, listener);
+    AuthnHelper.getInstance(getReactApplicationContext())
+        .umcLoginByType(appId, appKey, AuthnHelper.UMC_LOGIN_DISPLAY, new TokenListener() {
+          @Override
+          public void onGetTokenComplete(JSONObject jsonObject) {
+            callback.invoke(jsonObject.toString());
+          }
+        });
   }
 }
