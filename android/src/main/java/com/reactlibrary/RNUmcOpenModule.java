@@ -8,6 +8,8 @@ import com.facebook.react.bridge.Callback;
 import cm.pass.sdk.UMCSDK;
 import cm.pass.sdk.auth.AuthnHelper;
 import cm.pass.sdk.auth.TokenListener;
+import sun.reflect.ReflectionFactory.GetReflectionFactoryAction;
+
 import org.json.JSONObject;
 
 public class RNUmcOpenModule extends ReactContextBaseJavaModule {
@@ -27,7 +29,7 @@ public class RNUmcOpenModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void login(String appId, String appKey, final Callback callback) {
     AuthnHelper.getInstance(getReactApplicationContext())
-        .umcLoginByType(appId, appKey, AuthnHelper.UMC_LOGIN_DISPLAY, new TokenListener() {
+        .umcLoginByType(getReactApplicationContext(), appId, appKey, AuthnHelper.UMC_LOGIN_DISPLAY, new TokenListener() {
           @Override
           public void onGetTokenComplete(JSONObject jsonObject) {
             callback.invoke(jsonObject.toString());
