@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E916D531F7CEFF500329FDE /* UMCSDKOpen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916CD21F7CE73C00329FDE /* UMCSDKOpen.framework */; };
+		0E916D541F7CEFF900329FDE /* UMCBundle.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916CD11F7CE73C00329FDE /* UMCBundle.bundle */; };
 		B3E7B58A1CC2AC0600A0062D /* RNUmcOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNUmcOpen.m */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E916D531F7CEFF500329FDE /* UMCSDKOpen.framework in Frameworks */,
+				0E916D541F7CEFF900329FDE /* UMCBundle.bundle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
