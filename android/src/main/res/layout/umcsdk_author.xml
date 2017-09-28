@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/umcsdk_padding_container"
             android:text="@string/umcsdk_get"
-            android:textColor="@color/color_version_text"
+            android:textColor="@color/umcsdk_color_version_text"
             android:textSize="@dimen/umcsdk_font_twenteen" />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:text="@string/umcsdk_capability"
-            android:textColor="@color/color_version_text"
+            android:textColor="@color/umcsdk_color_version_text"
             android:textSize="@dimen/umcsdk_font_twenteen" />
     </LinearLayout>
 </LinearLayout>

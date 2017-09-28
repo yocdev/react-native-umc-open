@@ -20,7 +20,7 @@
         android:layout_marginLeft="@dimen/umcsdk_dimen_eight"
         android:gravity="center_vertical"
         android:maxLines="1"
-        android:textColor="@color/color_title_text"
+        android:textColor="@color/umcsdk_color_title_text"
         android:textSize="@dimen/umcsdk_font_fourteen" />
 
 </LinearLayout>

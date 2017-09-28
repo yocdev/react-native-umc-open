@@ -8,7 +8,7 @@
         android:id="@+id/umcsdk_login_head"
         android:layout_width="match_parent"
         android:layout_height="49dp"
-        android:background="@color/color_actionbar_bg" >
+        android:background="@color/umcsdk_color_actionbar_bg" >
 
         <Button
             android:fitsSystemWindows="true"
@@ -30,7 +30,7 @@
             android:maxWidth="200dp"
             android:maxLines="1"
             android:text="@string/umcsdk_login"
-            android:textColor="@color/color_title_text"
+            android:textColor="@color/umcsdk_color_title_text"
             android:textSize="@dimen/umcsdk_font_seventeen" />
 
         <TextView
@@ -41,7 +41,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="@dimen/umcsdk_dimen_ten"
             android:text="@string/umcsdk_switch_account"
-            android:textColor="@color/color_blue_text"
+            android:textColor="@color/umcsdk_color_blue_text"
             android:textSize="@dimen/umcsdk_font_sixteen" />
     </RelativeLayout>
 

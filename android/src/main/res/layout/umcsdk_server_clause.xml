@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="@string/umcsdk_version_name"
-        android:textColor="@color/color_version_text"
+        android:textColor="@color/umcsdk_color_version_text"
         android:textSize="@dimen/umcsdk_font_twenteen" />
 
     <LinearLayout

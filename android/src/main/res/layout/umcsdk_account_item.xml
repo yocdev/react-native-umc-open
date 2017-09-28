@@ -8,7 +8,7 @@
         android:id="@+id/umcsdk_account_item_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/umcsdk_btn_height"
-        android:background="@color/color_smsbg"
+        android:background="@color/umcsdk_color_smsbg"
         android:clickable="true">
 
         <TextView
@@ -19,7 +19,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="@dimen/umcsdk_loginbtn_left"
-            android:background="@color/color_actionbar_bg"
+            android:background="@color/umcsdk_color_actionbar_bg"
             android:drawableLeft="@drawable/umcsdk_mobile"
             android:drawablePadding="10dp"
             android:gravity="center_vertical"

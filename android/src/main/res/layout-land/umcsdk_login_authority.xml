@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
     <!-- 异常提示 -->
     <include
@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/umcsdk_title_layout"
-        android:visibility="gone" />
+        android:visibility="visible" />
 
     <!-- title -->
     <include
@@ -27,13 +27,12 @@
         android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbars="none"
-        android:layout_below="@+id/umcsdk_title_layout"
-        android:layout_toRightOf="@+id/umcsdk_exception_layout"
-        android:layout_toEndOf="@+id/umcsdk_exception_layout">
+        android:layout_below="@+id/umcsdk_title_layout">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:minHeight="320dp">
 
             <LinearLayout
                 android:id="@+id/umcsdk_single_account"
@@ -61,7 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="0.5dp"
                         android:layout_marginTop="45dp"
-                        android:background="#c6c6c6" />
+                        android:background="#c6c6c6"/>
 
                     <TextView
                         android:id="@+id/mobile_number"
@@ -122,8 +121,8 @@
                     layout="@layout/umcsdk_server_clause"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_below="@id/umcsdk_capaids_layout"
                     android:layout_alignParentBottom="true"
-                    android:layout_below="@+id/umcsdk_capaids_layout"
                     android:layout_marginTop="@dimen/umcsdk_server_clause_margin" />
             </RelativeLayout>
         </RelativeLayout>

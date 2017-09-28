@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_smsbg">
+    android:background="@color/umcsdk_color_smsbg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +37,9 @@
                 android:textColorHint="#c1c1c1"
                 android:textColor="#333333"
                 android:background="@android:color/transparent"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:maxLength="11"
+                android:inputType="number"/>
 
             <View
                 android:id="@+id/umcsdk_divider1"
@@ -73,7 +75,9 @@
                     android:background="@android:color/transparent"
                     android:textColorHint="#c1c1c1"
                     android:textColor="#333333"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:maxLength="6"
+                    android:inputType="number"/>
 
                 <TextView
                     android:id="@+id/umcsdk_smscode_btn"

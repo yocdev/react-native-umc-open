@@ -2,25 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_smsbg" >
-
-    <!-- title -->
-    <include
-        android:id="@+id/umcsdk_title_layout"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/umcsdk_title_height"
-        android:layout_alignParentTop="true"
-        layout="@layout/umcsdk_title" />
+    android:background="@color/umcsdk_color_smsbg" >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/umcsdk_title_layout"
         android:fillViewport="true"
-        android:scrollbars="none"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/umcsdk_title_layout">
+        android:scrollbars="none" >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -50,7 +39,9 @@
                 android:paddingTop="36dp"
                 android:textColorHint="#c1c1c1"
                 android:textColor="#333333"
-                android:textSize="17sp" />
+                android:textSize="17sp"
+                android:maxLength="11"
+                android:inputType="number"/>
 
 
             <!-- 短信验证码 -->
@@ -77,7 +68,9 @@
                     android:paddingRight="@dimen/umcsdk_dimen_fifteen"
                     android:textColorHint="#c1c1c1"
                     android:textColor="#333333"
-                    android:textSize="17sp" />
+                    android:textSize="17sp"
+                    android:maxLength="6"
+                    android:inputType="number"/>
 
                 <TextView
                     android:id="@+id/umcsdk_smscode_btn"
@@ -131,5 +124,13 @@
                 android:layout_marginTop="@dimen/umcsdk_server_clause_margin" />
         </RelativeLayout>
     </ScrollView>
+
+    <!-- title -->
+    <include
+        android:id="@+id/umcsdk_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/umcsdk_title_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/umcsdk_title" />
 
 </RelativeLayout>
