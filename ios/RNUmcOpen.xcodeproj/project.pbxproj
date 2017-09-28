@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0E916D531F7CEFF500329FDE /* UMCSDKOpen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916CD21F7CE73C00329FDE /* UMCSDKOpen.framework */; };
-		0E916D541F7CEFF900329FDE /* UMCBundle.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916CD11F7CE73C00329FDE /* UMCBundle.bundle */; };
+		0E916D571F7CF33E00329FDE /* UMCBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E916CD11F7CE73C00329FDE /* UMCBundle.bundle */; };
+		0E916D591F7CF34A00329FDE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916D581F7CF34A00329FDE /* CoreTelephony.framework */; };
+		0E916D5B1F7CF35500329FDE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916D5A1F7CF35500329FDE /* SystemConfiguration.framework */; };
+		0E916D5D1F7CF35E00329FDE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E916D5C1F7CF35E00329FDE /* Security.framework */; };
 		B3E7B58A1CC2AC0600A0062D /* RNUmcOpen.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNUmcOpen.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +30,9 @@
 /* Begin PBXFileReference section */
 		0E916CD11F7CE73C00329FDE /* UMCBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMCBundle.bundle; sourceTree = "<group>"; };
 		0E916CD21F7CE73C00329FDE /* UMCSDKOpen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMCSDKOpen.framework; sourceTree = "<group>"; };
+		0E916D581F7CF34A00329FDE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0E916D5A1F7CF35500329FDE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0E916D5C1F7CF35E00329FDE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		134814201AA4EA6300B7C361 /* libRNUmcOpen.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNUmcOpen.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3E7B5881CC2AC0600A0062D /* RNUmcOpen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUmcOpen.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNUmcOpen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUmcOpen.m; sourceTree = "<group>"; };
@@ -37,8 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E916D5D1F7CF35E00329FDE /* Security.framework in Frameworks */,
+				0E916D5B1F7CF35500329FDE /* SystemConfiguration.framework in Frameworks */,
+				0E916D591F7CF34A00329FDE /* CoreTelephony.framework in Frameworks */,
 				0E916D531F7CEFF500329FDE /* UMCSDKOpen.framework in Frameworks */,
-				0E916D541F7CEFF900329FDE /* UMCBundle.bundle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +56,9 @@
 		0E3372AA1F7BAA4F000F8F77 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E916D5C1F7CF35E00329FDE /* Security.framework */,
+				0E916D5A1F7CF35500329FDE /* SystemConfiguration.framework */,
+				0E916D581F7CF34A00329FDE /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -82,6 +93,7 @@
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
+				0E916D561F7CF33600329FDE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -122,6 +134,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E916D561F7CF33600329FDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E916D571F7CF33E00329FDE /* UMCBundle.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
